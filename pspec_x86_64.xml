@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>ecl</Name>
+        <Homepage>https://common-lisp.net/project/ecl/</Homepage>
+        <Packager>
+            <Name>Michael Rutherford</Name>
+            <Email>michaellogan.rutherford@gmail.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">ECL is an interpreter of the Common-Lisp language</Summary>
+        <Description xml:lang="en">ECL (Embeddable Common-Lisp) is an interpreter of the Common-Lisp language as described in the X3J13 Ansi specification, 
+featuring CLOS (Common-Lisp Object System), conditions, loops, etc, plus a translator to C, which can produce standalone executables.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>ecl</Name>
+        <Summary xml:lang="en">ECL is an interpreter of the Common-Lisp language</Summary>
+        <Description xml:lang="en">ECL (Embeddable Common-Lisp) is an interpreter of the Common-Lisp language as described in the X3J13 Ansi specification, 
+featuring CLOS (Common-Lisp Object System), conditions, loops, etc, plus a translator to C, which can produce standalone executables.
+</Description>
+        <PartOf>programming</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib64/ecl-16.0.0</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>ecl-devel</Name>
+        <Summary xml:lang="en">Development files for ecl</Summary>
+        <Description xml:lang="en">ECL (Embeddable Common-Lisp) is an interpreter of the Common-Lisp language as described in the X3J13 Ansi specification, 
+featuring CLOS (Common-Lisp Object System), conditions, loops, etc, plus a translator to C, which can produce standalone executables.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="current">ecl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="16">
+            <Date>2015-12-29</Date>
+            <Version>16.0.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Michael Rutherford</Name>
+            <Email>michaellogan.rutherford@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
